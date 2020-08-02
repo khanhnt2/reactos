@@ -1335,7 +1335,7 @@ NtGdiExtGetObjectW(
         LOGFONTW logfontw;
         EXTLOGFONTW extlogfontw;
         ENUMLOGFONTEXDVW enumlogfontexdvw;
-    } object;
+    } object = { 0 };
 
     /* Normalize to the largest supported object size */
     cjMaxSize = min((UINT)cjBufferSize, sizeof(object));
